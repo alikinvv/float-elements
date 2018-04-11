@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var countEl = 100;
     var tl = new TimelineMax();
+    var tl2 = new TimelineMax();
     var arrayEl;
     var classes = ["black", "red"];
 
@@ -22,8 +23,14 @@ $(document).ready(function () {
 
     arrayEl = $('.el').toArray();
 
-    TweenMax.set(arrayEl, {y: -80});
+    tl.set(arrayEl, {y: -80});
     arrayEl.sort(function(){return 0.5-Math.random()});
-    TweenMax.staggerTo(arrayEl, 10, {y: h + 200, rotation: Math.random() * 360, ease: Sine.easeInOut, repeat: -1}, 0.3);
+    tl.staggerTo(arrayEl, 10, {y: h + 200, rotation: Math.random() * 360, ease: Sine.easeInOut, repeat: -1}, 0.3);
+
+    $('.el').click(function() {
+        tl2.to(this, 0.6, {height: 70, ease: Elastic.easeOut.config(1, 0.3)});
+        tl2.to(this, 0.6, {scale: 0});
+       // TweenMax.to('.els', 0.6, {opacity: 0}, '-=0.3');
+    });
 
 });

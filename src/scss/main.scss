@@ -40,6 +40,11 @@ body {
 	overflow: hidden;
 }
 
+.els {
+	height: 100%;
+	width: 100%;
+}
+
 .el {
 	width: 70px;
 	height: 25px;	
@@ -47,6 +52,7 @@ body {
 	position: absolute;
 	top: -80px;
 	z-index: 0;
+	cursor: pointer;
 	&.red {
 		background: #f0231e;
 	}
@@ -64,5 +70,5 @@ h1 {
 	font-size: 240px;
 	color: #2d2d2d;
 	text-shadow: -7px 10px 0 rgba(0,0,0,0.1);
-	z-index: 2;
+	z-index: 2;	
 }
