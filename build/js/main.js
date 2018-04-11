@@ -29,7 +29,7 @@ $(document).ready(function () {
 
     $('.el').click(function() {
         tl2.to(this, 0.6, {height: 70, ease: Elastic.easeOut.config(1, 0.3)});
-        tl2.to(this, 0.6, {scale: 0});
+        tl2.to(this, 0.3, {scale: 0});
        // TweenMax.to('.els', 0.6, {opacity: 0}, '-=0.3');
     });
 
