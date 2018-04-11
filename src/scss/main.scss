@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+@import 'mixins';
+
+/*** MIXINS USAGE ***
+
+	@include font-face("fontName", "../fonts/fontPath/fontName", normal); 
+
+	@include xs(12);
+	@include sm(12);
+	@include md(12);
+	@include lg(12);
+
+	@include r(768);
+	@include rmin(768);
+
+	@include trans / trans($what $dur $easing);
+	@include cover;
+
+	@include centerX / centerXa
+	@include centerY / centerYa
+
+	@include overlay($opacity)
+***/
+
+.icon {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	font-size: 30px;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	min-height: 800px;
+	font-family: 'Roboto Condensed', sans-serif;
+	overflow: hidden;
+}
+
+.el {
+	width: 70px;
+	height: 25px;	
+	border-radius: 50px;
+	position: absolute;
+	top: -80px;
+	z-index: 0;
+	&.red {
+		background: #f0231e;
+	}
+	&.black {
+		background: #030303
+	}
+}
+
+h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: bold;
+	font-size: 240px;
+	color: #2d2d2d;
+	text-shadow: -7px 10px 0 rgba(0,0,0,0.1);
+	z-index: 2;
+}
